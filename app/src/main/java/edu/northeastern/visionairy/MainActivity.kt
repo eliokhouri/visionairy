@@ -25,6 +25,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.ContextCompat
 import edu.northeastern.visionairy.ui.theme.NeonRed
 import edu.northeastern.visionairy.ui.theme.VisionairyTheme
+//test
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
