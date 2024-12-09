@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "edu.northeastern.visionairy"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -62,5 +62,11 @@ dependencies {
     implementation(libs.androidx.camera.view)
     implementation(libs.androidx.camera.lifecycle)
     implementation(libs.androidx.camera.camera2)
+
+    // Add OkHttp dependency
+    implementation(libs.okhttp)
+
+    // Add Socket.IO client dependency
+    implementation(libs.socket.io.client)
 
 }
