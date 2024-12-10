@@ -11,6 +11,7 @@ activityCompose = "1.9.3"
 composeBom = "2024.11.00"
 okhttp = "4.12.0"
 socketio = "2.0.1"
+composeIconsExtended = "1.7.5"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,6 +37,8 @@ androidx-camera-camera2 = { group = "androidx.camera", name = "camera-camera2", 
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 socket-io-client = { group = "io.socket", name = "socket.io-client", version.ref = "socketio" }
+
+androidx-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "composeIconsExtended" }
 
 
 

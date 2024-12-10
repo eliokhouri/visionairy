@@ -18,6 +18,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.graphics.Color
 import edu.northeastern.visionairy.ui.theme.VisionairyTheme
 
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CameraFront
+import androidx.compose.material.icons.filled.CameraRear
+import androidx.compose.material3.Icon
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.PaddingValues
+import edu.northeastern.visionairy.ui.theme.LightBlue40
+
 class HomeActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,22 +69,47 @@ fun HomeScreen(
             textAlign = TextAlign.Center, // Center align
             modifier = Modifier
                 .align(Alignment.TopCenter) // Position title near the top center
-                .padding(top = 150.dp) // Adjust padding as needed
+                .padding(top = 100.dp) // Adjust padding as needed
         )
 
         // Buttons centered on the screen
         Column(
             modifier = Modifier
                 .align(Alignment.Center) // Anchor the buttons to the center
-                .padding(top = 1.dp), // Add extra padding if needed later
+                .padding(top = 0.dp), // Add extra padding if needed later
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Button(onClick = onFrontCameraClick) {
-                Text(text = "Front Camera")
+            Button(
+                onClick = onFrontCameraClick,
+                shape = CircleShape,
+                modifier = Modifier.size(100.dp),
+                contentPadding = PaddingValues(0.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = LightBlue40
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.CameraFront,
+                    contentDescription = "Front Camera",
+                    tint = Color.White
+                )
             }
-            Spacer(modifier = Modifier.height(16.dp)) // Spacing between buttons
-            Button(onClick = onBackCameraClick) {
-                Text(text = "Back Camera")
+            Spacer(modifier = Modifier.height(20.dp)) // Spacing between buttons
+
+            Button(
+                onClick = onBackCameraClick,
+                shape = CircleShape,
+                modifier = Modifier.size(100.dp),
+                contentPadding = PaddingValues(0.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = LightBlue40
+                )
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.CameraRear,
+                    contentDescription = "Back Camera",
+                    tint = Color.White
+                )
             }
         }
     }
